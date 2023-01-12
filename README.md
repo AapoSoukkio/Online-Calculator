@@ -50,4 +50,4 @@ Language on the sites: finnish
 2.  [JavaScript Tutorial](https://www.w3schools.com/js/)
 3.  [Responsive Web Design](https://www.w3schools.com/css/css_rwd_intro.asp)
 4.  [HTML Layout Elements and Techniques](https://www.w3schools.com/html/html_layout.asp)
-5.  [How to try with mobile device](https://www.youtube.com/watch?v=uRYHX4EwYYA)
+5.  [How to try it with your mobile device](https://www.youtube.com/watch?v=uRYHX4EwYYA)
