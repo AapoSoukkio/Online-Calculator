@@ -10,9 +10,9 @@ A responsive multi-page website that includes various calculators for percent ca
 
 ### Features
 
--A percent calculator that can calculate percentage increase and decrease, as well as find the original value from a percentage.
--A calculator for the area of a circle that can calculate the area given the radius.
--A basic calculator that can perform arithmetic operations such as addition, subtraction, multiplication, and division.
+- A percent calculator that can calculate percentage increase and decrease, as well as find the original value from a percentage.
+- A calculator for the area of a circle that can calculate the area given the radius.
+- A basic calculator that can perform arithmetic operations such as addition, subtraction, multiplication, and division.
 
 ### Technologies Used
 
