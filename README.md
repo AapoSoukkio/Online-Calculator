@@ -1,4 +1,4 @@
-# Project: Online Calculator
+# Project: Responsive Online Calculator
 
 Made by: Aapo Soukkio
 
@@ -6,7 +6,7 @@ Made by: Aapo Soukkio
 
 ## About the project
 
-A multi-page website that includes various calculators for percent calculations, area of circle, and basic calculations.
+A responsive multi-page website that includes various calculators for percent calculations, area of circle, and basic calculations.
 
 ### Features
 
@@ -35,6 +35,8 @@ git clone https://github.com/username/online-calculator.git
 
 4. Input the necessary values and click the "Calculate" (In finnish = Laske) button to perform the calculation.
 
+[Feel free to try it with your mobile device also!](https://www.youtube.com/watch?v=uRYHX4EwYYA)
+
 ### Notes
 
 Language on the sites: finnish 
@@ -44,4 +46,8 @@ Language on the sites: finnish
 > **Following material will help to understand this project and learn more about techniques used in this project.**
 
 
-1. [JavaScript Tutorial](https://www.w3schools.com/js/)
+1.  [How To Do Math in JavaScript](https://www.digitalocean.com/community/tutorials/how-to-do-math-in-javascript-with-operators)
+2.  [JavaScript Tutorial](https://www.w3schools.com/js/)
+3.  [Responsive Web Design](https://www.w3schools.com/css/css_rwd_intro.asp)
+4.  [HTML Layout Elements and Techniques](https://www.w3schools.com/html/html_layout.asp)
+5.  [How to try with mobile device](https://www.youtube.com/watch?v=uRYHX4EwYYA)
