@@ -33,7 +33,7 @@ git clone https://github.com/username/online-calculator.git
 
 3. Use the navigation menu to switch between the different calculators.
 
-4. Input the necessary values and click the "Calculate" (In finnish = Laske) button to perform the calculation.
+4. Input the necessary values and click the "Calculate" (in finnish = Laske) button to perform the calculation.
 
 [Feel free to try it with your mobile device also!](https://www.youtube.com/watch?v=uRYHX4EwYYA)
 
