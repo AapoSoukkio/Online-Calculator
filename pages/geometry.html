@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Geometry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../styles.css" rel="stylesheet">
+    <script src="../script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand-title">Aapo Counts</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="../index.html">Koti</a></li>
+                <li><a href="percent.html">Prosentti laskuri</a></li>
+                <li><a class="active" href="geometry.html">Geometria</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <h4 class="w3-bar-item"><b>Laskimet</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="../index.html">Laskin</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="percent.html">Prosenttilaskurit</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="geometry.html">Geometrialaskurit</a>
+    </nav>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+
+    <div class="w3-main" style="margin-left:250px">
+
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal">Ympyrän pinta-ala laskuri</h1>
+                <p>Laske ympyrän säde, pinta-ala, halkaisija ja kehä syöttämällä
+                    jonkun edellä mainitun arvo sille tarkoitettuun kenttään.</p>
+                <div id="w3-twothird w3-container">
+                    <form id="circle-form">
+                        <table class="circle">
+                            <tr>
+                                <td>
+                                    <label for="circleR">
+                                        Säde (r)
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="circleR" step="0.01" />
+                                </td>
+                                <td>
+                                    <label for="circleA">
+                                        Ympyrän pinta-ala (A)
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="circleA" step="0.01" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="circleD">
+                                        Ympyrän halkaisija (d)
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="circleD" step="0.01" />
+                                </td>
+                                <td>
+                                    <label for="circleC.">
+                                        Ympyrän kehä (C)
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="circleC" step="0.01" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input id="calcCircle-submit" type="submit" value="Laske" />
+                                </td>
+                                <td>
+                                    <input id="calcCircle-clear" type="button" value="Tyhjennä" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+            <div class="w3-third w3-container">
+                <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+                <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+        </div>
+
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal">Tänne kolmion pinta-ala</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat.</p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+                <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+        </div>
+
+        <footer id="myFooter">
+            <div class="w3-container w3-theme-l2 w3-padding-32">
+                <h4>Footer</h4>
+            </div>
+
+            <div class="w3-container w3-theme-l1">
+                <p>aapocounts.fi © 2023</p>
+            </div>
+        </footer>
+
+        <!-- END MAIN -->
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+
+        const rInput = document.querySelector('#circleR');
+        const dInput = document.querySelector('#circleD');
+        const aInput = document.querySelector('#circleA');
+        const cInput = document.querySelector('#circleC');
+
+        // Clears input elements except buttons
+        document.getElementById("calcCircle-clear").addEventListener("click", function () {
+            var inputs = document.getElementById("circle-form").getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].type !== "submit" && inputs[i].id !== "calcCircle-clear") {
+                    inputs[i].value = "";
+                }
+            }
+        });
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            var r = parseFloat(rInput.value);
+            var d = parseFloat(dInput.value);
+            var a = parseFloat(aInput.value);
+            var c = parseFloat(cInput.value);
+
+            if (!r && !a) {
+                r = d / 2;
+                a = Math.PI * r * r;
+            } else if (!r) {
+                r = Math.sqrt(a / Math.PI);
+            } else if (!a) {
+                a = Math.PI * r * r;
+            }
+
+            if (!d && !c) {
+                d = r * 2;
+                c = Math.PI * d;
+            } else if (!d && c) {
+                d = c / Math.PI;
+                r = d / 2;
+                a = Math.PI * r * r;
+            } else if (!c && d) {
+                c = Math.PI * d;
+            }
+
+            rInput.value = r;
+            dInput.value = d;
+            aInput.value = a;
+            cInput.value = c;
+        });
+
+    </script>
+
+</body>
+
+</html>

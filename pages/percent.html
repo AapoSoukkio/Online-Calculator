@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Percent</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="../styles.css" rel="stylesheet">
+  <script src="../script.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand-title">Aapo Counts</div>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="../index.html">Koti</a></li>
+        <li><a class="active" href="percent.html">Prosentti laskuri</a></li>
+        <li><a href="geometry.html">Geometria</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+    <h4 class="w3-bar-item"><b>Laskimet</b></h4>
+    <a class="w3-bar-item w3-button w3-hover-black" href="../index.html">Laskin</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="percent.html">Prosenttilaskurit</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="geometry.html">Geometrialaskurit</a>
+  </nav>
+
+  <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+
+  <div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Prosenttilaskurit</h1>
+        <p> Prosentti (merkki %) on mitta, jota käytetään ilmaisemaan
+          suhteellista osuutta tai määrällistä suhdetta. Se ilmaisee,
+          kuinka monta sadasosaa jokin on jostakin. Yksi prosentti vastaa
+          siis yhtä sadasosaa (1/100) tai 0,01 (desimaalilukuna) jostakin.
+          Alla olevilla laskureilla haastavammatkin prosenttilaskut taipuvat vaivata.</p>
+        <br>
+        <p>Tällä laskurilla selvität kuinka monta prosenttia joku luku on toisesta luvusta. Esim.
+          Kuinka monta prosenttia on luku 36 luvusta 144? Vastaus: 36 / 144 = 0,25 = 25% </p>
+        <div id="w3-twothird w3-container">
+          <form id="calc1" class="calcPercent-form">
+            <h3>Kuinka monta prosenttia</h3>
+            luku <input id="calc1-num-x" type="number" /> on luvusta
+            <input id="calc1-num-y" type="number" /> ?
+            <input id="calc1-submit" type="submit" value="Laske" />
+            Tulos on
+            <label class="percent-solution" id="calc1-solution" for="calc1-solution"></label>
+          </form>
+        </div>
+      </div>
+
+      <div class="w3-third w3-container">
+        <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+        <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+      </div>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-twothird w3-container">
+        <p>Tällä laskurilla saat selville paljonko joku tietty prosenttimäärä on
+          jostakin luvusta. Esim. Kuinka paljon on 42% (prosenttia) luvusta 138?
+          Vastaus: 138 * 0,42 = 57,96</p>
+        <form id="calc2" class="calcPercent-form">
+          <h3>Kuinka paljon on</h3>
+          <input id="calc2-num-x" type="number" /> prosenttia luvusta
+          <input id="calc2-num-y" type="number" /> ?
+          <input id="calc2-submit" type="submit" value="Laske" />
+          Tulos on
+          <label class="percent-solution" id="calc2-solution" for="calc2-solution"></label>
+        </form>
+      </div>
+      <div class="w3-third w3-container">
+        <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+        <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+      </div>
+    </div>
+
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <p>Alla olevalla laskurilla selvität esimerkiksi alennetun tuotteen uuden hinnan näppärästi.
+          Esim. 239€ maksavan tuotteen hintaa alennetaan 20%. Mikä on uusi hinta?
+          Vastaus: 239 * (1-0,2) = 191,2€
+        </p>
+        <div id="w3-twothird w3-container">
+          <form id="calc3" class="calcPercent-form">
+            <h3>Mikä on lopputulos kun lukua <strong>lasketaan</strong> tietyllä prosentilla?</h3>
+            Kun lukuun
+            <input id="calc3-num-x" type="number" /> tehdään
+            <input id="calc3-num-y" type="number" /> prosentin <strong>alennus,</strong> mikä on tulos?
+            <input id="calc3-submit" type="submit" value="Laske" />
+            Tulos on
+            <label class="percent-solution" id="calc3-solution" for="calc3-solution"></label>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+          <p>Tällä laskurilla selvität mikä on lopputulos kun jotain lukua kasvatetaan
+            tietyllä prosentilla. Esim. Mikä on lopputulos kun lukua 63 kasvatetaan 84% (prosentilla)?
+            Vastaus: 63 * (1 + 0,84) = 115,92
+          </p>
+          <div id="w3-twothird w3-container">
+            <form id="calc4" class="calcPercent-form">
+              <h3>Mikä on lopputulos kun lukua <strong>kasvatetaan</strong> tietyllä prosentilla?</h3>
+              Kun lukuun
+              <input id="calc4-num-x" type="number" /> tehdään
+              <input id="calc4-num-y" type="number" /> prosentin <strong>korotus,</strong> mikä on tulos?
+              <input id="calc4-submit" type="submit" value="Laske" />
+              Tulos on
+              <label class="percent-solution" id="calc4-solution" for="calc4-solution"></label>
+            </form>
+          </div>
+        </div>
+
+        <div class="w3-row w3-padding-64">
+          <div class="w3-twothird w3-container">
+            <p>Kun luku kasvaa tai laskee sen prosentuaalisen muutoksen hahmottaminen voi olla
+              haastavaa. Alla olevalla laskimella saat vastauksen nopeasti.
+              Esim. Montako prosenttia luku 18 kasvaa kun siihen lisätään 13?
+              Vastaus: Ensin pitää tietää mihin lukuun 18 kasvoi. Eli 18 + 13 = 31.
+              Sitten voimme laskea prosentuaalisen muutoksen: (31 - 18) / 18 * 100 = 72,22</p>
+            <form id="calc5" class="calcPercent-form">
+              <h3>Kuinka monta prosenttia laskee tai nousee?</h3>
+              Kun luku
+              <input id="calc5-num-x" type="number" /> nousee tai laskee lukuun
+              <input id="calc5-num-y" type="number" /> ?
+              <input id="calc5-submit" type="submit" value="Laske" />
+              Tulos on
+              <label class="percent-solution" id="calc5-solution" for="calc5-solution"></label>
+            </form>
+          </div>
+          <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+            <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+          </div>
+        </div>
+
+        <footer class="footer" id="myFooter">
+          <div class="w3-container w3-theme-l2 w3-padding-32">
+            <h4>Footer</h4>
+          </div>
+
+          <div class="w3-container w3-theme-l1">
+            <p>aapocounts.fi © 2023</p>
+          </div>
+        </footer>
+
+        <!-- END MAIN -->
+      </div>
+
+      <script>
+        // X is what % of Y?
+        document.getElementById("calc1-submit")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            const numX = document.getElementById("calc1-num-x").value;
+            const numY = document.getElementById("calc1-num-y").value;
+            const percentage = (numX / numY) * 100;
+            var solution = Math.round((percentage + Number.EPSILON) * 100) / 100;
+            solution = solution + "%";
+            document.getElementById("calc1-solution").textContent = solution;
+          });
+        // How much is X% of Y?
+        document.getElementById("calc2-submit")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            const numX = document.getElementById("calc2-num-x").value;
+            const numY = document.getElementById("calc2-num-y").value;
+            const percentage = (numX / 100) * numY;
+            var solution = Math.round((percentage + Number.EPSILON) * 100) / 100;
+            document.getElementById("calc2-solution").textContent = solution;
+          });
+        // What is the final result when X decreases Y%?
+        document.getElementById("calc3-submit")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            const numX = document.getElementById("calc3-num-x").value;
+            const numY = document.getElementById("calc3-num-y").value;
+            const percentage = numX * ((100 - numY) / 100);
+            var solution = Math.round((percentage + Number.EPSILON) * 100) / 100;
+            document.getElementById("calc3-solution").textContent = solution;
+          })
+        // What is the end result when X increases by Y%?
+        document.getElementById("calc4-submit")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            const numX = document.getElementById("calc4-num-x").value;
+            const numY = document.getElementById("calc4-num-y").value;
+            const percentage = numX * (1 + numY / 100);
+            var solution = Math.round((percentage + Number.EPSILON) * 100) / 100;
+            document.getElementById("calc4-solution").textContent = solution;
+          })
+        // How many percentages will decrease or increase?
+        document.getElementById("calc5-submit")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            const numX = document.getElementById("calc5-num-x").value;
+            const numY = document.getElementById("calc5-num-y").value;
+            const percentage = (numY - numX) / numX * 100;
+            var solution = Math.round((percentage + Number.EPSILON) * 100) / 100;
+            solution = solution + "%";
+            document.getElementById("calc5-solution").textContent = solution;
+          });
+
+      </script>
+
+</body>
+
+</html>
