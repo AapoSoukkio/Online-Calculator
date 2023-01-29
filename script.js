@@ -146,7 +146,7 @@ class Calculator {
 
 
   //****************************** */
-  // Not usefull at the moment
+  // Not usefull at the moment from here on
   //******************************** */
 
   // Get the Sidebar

@@ -259,12 +259,12 @@
   margin-right: 10px;
 }
 
-  #circle-form-container {
+  #geometry-form-container {
     display: flex;
     justify-content: center;
   }
   
-  #circle-form {
+  #geometry-form {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -277,31 +277,100 @@
     width: 300px;
   }
   
-  #circle-form td {
+  #geometry-form td {
     display: table-row;
     margin-bottom: 30px;
   }
   
-  #circle-form label {
+  #geometry-form label {
     align-items: center;
     display: flex;
     flex-direction: column;
     margin-right: 10px;
   }
   
-  #circle-form input[type="number"] {
+  #geometry-form input[type="number"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 14px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  #geometry-form select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 40px;
     margin-bottom: 20px;
     padding: 10px;
     width: 100%;
   }
   
-  #circle-form input[type="submit"] {
+  #geometry-form input[type="submit"] {
     margin: 10px 10px 10px;
   }
+
+  #vat-form-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #vat-form {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  #vat-form td {
+    display: table-row;
+    margin-bottom: 30px;
+  }
+  
+  #vat-form label {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  
+  #vat-form input[type="number"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  #vat-form select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  #vat-form input[type="submit"] {
+    margin: 10px 10px 10px;
+  }
+
 
   input[type="button"], input[type="submit"] {
     background-color: green;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 
 <head>
     <title>Geometry</title>
@@ -23,12 +23,14 @@
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
+            <span class="bar"></span>
         </a>
         <div class="navbar-links">
             <ul>
                 <li><a href="../index.html">Koti</a></li>
                 <li><a href="percent.html">Prosentti laskuri</a></li>
                 <li><a class="active" href="geometry.html">Geometria</a></li>
+                <li><a href="vat.html">ALV</a></li>
             </ul>
         </div>
     </nav>
@@ -39,6 +41,7 @@
         <a class="w3-bar-item w3-button w3-hover-black" href="../index.html">Laskin</a>
         <a class="w3-bar-item w3-button w3-hover-black" href="percent.html">Prosenttilaskurit</a>
         <a class="w3-bar-item w3-button w3-hover-black" href="geometry.html">Geometrialaskurit</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="vat.html">ALV-laskuri</a>
     </nav>
 
     <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
@@ -51,8 +54,8 @@
                 <p>Laske ympyrän säde, pinta-ala, halkaisija ja kehä syöttämällä
                     jonkun edellä mainitun arvo sille tarkoitettuun kenttään.</p>
                 <div id="w3-twothird w3-container">
-                    <form id="circle-form">
-                        <table class="circle">
+                    <form id="geometry-form">
+                        <table class="geometry">
                             <tr>
                                 <td>
                                     <label for="circleR">
@@ -91,9 +94,6 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input id="calcCircle-submit" type="submit" value="Laske" />
-                                </td>
-                                <td>
                                     <input id="calcCircle-clear" type="button" value="Tyhjennä" />
                                 </td>
                             </tr>
@@ -110,14 +110,64 @@
 
         <div class="w3-row">
             <div class="w3-twothird w3-container">
-                <h1 class="w3-text-teal">Tänne kolmion pinta-ala</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Lorem ipsum
-                    dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                    ea commodo consequat. testing</p>
+                <h1 class="w3-text-teal">Pallon tilavuus ja pinta-ala laskuri</h1>
+                <p>Laske pallon tilavuus, pinta-ala, ympärysmitta säde ja halkaisija syöttämällä
+                    jonkun edellä mainitun arvo sille tarkoitettuun kenttään.</p>
+                <div id="w3-twothird w3-container">
+                    <form id="geometry-form">
+                        <table class="geometry">
+                            <tr>
+                                <td>
+                                    <label for="sphereR">
+                                        Pallon Säde (r)
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="sphereR" step="0.01" />
+                                </td>
+                                <td>
+                                    <label for="sphereD">
+                                        Pallon halkaisija (d)
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="sphereD" step="0.01" />
+                                </td>
+                                <td>
+                                    <label for="sphereC.">
+                                        Pallon Ympärysmitta (C)
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="sphereC" step="0.01" />
+                                </td>
+                                <td>
+                                    <label for="sphereA">
+                                        Pallon pinta-ala (A)
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="sphereA" step="0.01" />
+                                </td>
+                                <td>
+                                    <label for="sphereV">
+                                        Pallon tilavuus (V)
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="sphereV" step="0.01" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input id="calcSphere-clear" type="button" value="Tyhjennä" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
             </div>
+
             <div class="w3-third w3-container">
                 <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
                 <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
@@ -138,55 +188,107 @@
     </div>
 
     <script>
-        const form = document.querySelector('form');
-
-        const rInput = document.querySelector('#circleR');
-        const dInput = document.querySelector('#circleD');
-        const aInput = document.querySelector('#circleA');
-        const cInput = document.querySelector('#circleC');
-
-        // Clears input elements except buttons
-        document.getElementById("calcCircle-clear").addEventListener("click", function () {
-            var inputs = document.getElementById("circle-form").getElementsByTagName("input");
-            for (var i = 0; i < inputs.length; i++) {
-                if (inputs[i].type !== "submit" && inputs[i].id !== "calcCircle-clear") {
-                    inputs[i].value = "";
-                }
-            }
+        //Circle calculations
+        document.getElementById("circleR").addEventListener("input", function () {
+            let r = Number(this.value);
+            document.getElementById("circleD").value = 2 * r;
+            document.getElementById("circleC").value = 2 * Math.PI * r;
+            document.getElementById("circleA").value = Math.PI * r * r;
         });
 
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
+        document.getElementById("circleD").addEventListener("input", function () {
+            let d = Number(this.value);
+            let r = d / 2;
+            document.getElementById("circleR").value = r;
+            document.getElementById("circleC").value = 2 * Math.PI * r;
+            document.getElementById("circleA").value = Math.PI * r * r;
+        });
 
-            var r = parseFloat(rInput.value);
-            var d = parseFloat(dInput.value);
-            var a = parseFloat(aInput.value);
-            var c = parseFloat(cInput.value);
+        document.getElementById("circleC").addEventListener("input", function () {
+            let C = Number(this.value);
+            let r = C / (2 * Math.PI);
+            let d = 2 * r;
+            document.getElementById("circleR").value = r;
+            document.getElementById("circleD").value = d;
+            document.getElementById("circleA").value = Math.PI * r * r;
+        });
 
-            if (!r && !a) {
-                r = d / 2;
-                a = Math.PI * r * r;
-            } else if (!r) {
-                r = Math.sqrt(a / Math.PI);
-            } else if (!a) {
-                a = Math.PI * r * r;
-            }
+        document.getElementById("circleA").addEventListener("input", function () {
+            let A = Number(this.value);
+            let r = Math.sqrt(A / Math.PI);
+            let d = 2 * r;
+            let C = 2 * Math.PI * r;
+            document.getElementById("circleR").value = r;
+            document.getElementById("circleD").value = d;
+            document.getElementById("circleC").value = C;
+        });
 
-            if (!d && !c) {
-                d = r * 2;
-                c = Math.PI * d;
-            } else if (!d && c) {
-                d = c / Math.PI;
-                r = d / 2;
-                a = Math.PI * r * r;
-            } else if (!c && d) {
-                c = Math.PI * d;
-            }
+        document.getElementById("calcCircle-clear").addEventListener("click", function () {
+            document.getElementById("circleR").value = "";
+            document.getElementById("circleD").value = "";
+            document.getElementById("circleC").value = "";
+            document.getElementById("circleA").value = "";
+        });
 
-            rInput.value = r;
-            dInput.value = d;
-            aInput.value = a;
-            cInput.value = c;
+
+
+//Sphere calculations from here on
+        document.getElementById("sphereR").addEventListener("input", function () {
+            let r = Number(this.value);
+            document.getElementById("sphereD").value = 2 * r;
+            document.getElementById("sphereC").value = 2 * Math.PI * r;
+            document.getElementById("sphereA").value = 4 * Math.PI * r * r;
+            document.getElementById("sphereV").value = (4 / 3) * Math.PI * r * r * r;
+        });
+
+        document.getElementById("sphereD").addEventListener("input", function () {
+            let d = Number(this.value);
+            let r = d / 2;
+            document.getElementById("sphereR").value = r;
+            document.getElementById("sphereC").value = 2 * Math.PI * r;
+            document.getElementById("sphereA").value = 4 * Math.PI * r * r;
+            document.getElementById("sphereV").value = (4 / 3) * Math.PI * r * r * r;
+        });
+
+        document.getElementById("sphereC").addEventListener("input", function () {
+            let C = Number(this.value);
+            let r = C / (2 * Math.PI);
+            let d = 2 * r;
+            document.getElementById("sphereR").value = r;
+            document.getElementById("sphereD").value = d;
+            document.getElementById("sphereA").value = 4 * Math.PI * r * r;
+            document.getElementById("sphereV").value = (4 / 3) * Math.PI * r * r * r;
+        });
+
+        document.getElementById("sphereA").addEventListener("input", function () {
+            let A = Number(this.value);
+            let r = Math.sqrt(A / (4 * Math.PI));
+            let d = 2 * r;
+            let C = 2 * Math.PI * r;
+            document.getElementById("sphereR").value = r;
+            document.getElementById("sphereD").value = d;
+            document.getElementById("sphereC").value = C;
+            document.getElementById("sphereV").value = (4 / 3) * Math.PI * r * r * r;
+        });
+
+        document.getElementById("sphereV").addEventListener("input", function () {
+            let V = Number(this.value);
+            let r = Math.cbrt((3 / 4) * V / Math.PI);
+            let d = 2 * r;
+            let C = 2 * Math.PI * r;
+            let A = 4 * Math.PI * r * r;
+            document.getElementById("sphereR").value = r;
+            document.getElementById("sphereD").value = d;
+            document.getElementById("sphereC").value = C;
+            document.getElementById("sphereA").value = A;
+        });
+
+        document.getElementById("calcSphere-clear").addEventListener("click", function () {
+            document.getElementById("sphereR").value = "";
+            document.getElementById("sphereD").value = "";
+            document.getElementById("sphereC").value = "";
+            document.getElementById("sphereA").value = "";
+            document.getElementById("sphereV").value = "";
         });
 
     </script>
